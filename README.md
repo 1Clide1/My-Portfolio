@@ -1,3 +1,7 @@
+https://1clide1.github.io/My-Portfolio/
+
+(/assets/images/wp.png?raw=true "Portfolio Screenshot")
+
 # My-Portfolio:
 Hello, my name is Brandon Diaz adn this is a website I have created to showcase my web development portfolio. This is subject to change and transform once throughout the years, the more I learn the more the website will change and reflect my skillset. I made this because I do want a job in web development and for every job whether it is creative or even a 9-5 you need a resume and better yet a portfolio to show your skills and what you have learned. I feel like a portfolio is better than a standard resume because it shows the real skills you have. Personally at this moment I am still learning.
 
