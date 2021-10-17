@@ -1,0 +1,371 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+/* this controls the colors for the whole website */
+:root {
+    --bg-color: rgb(143, 136, 136);
+    --primary-color: #7109AA;
+    --second-color: #FFD300;
+    --third-color: #48036f
+}
+/* Header Section */
+header {
+    background-color: var(--bg-color);
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* this changes the header and h1 tags color and how they look on the website */
+header h1 {
+    color: var(--primary-color);
+    background-color: var(--second-color);
+    font-size: 36px;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 0 0 0 50px var(--second-color); 
+}
+/* Nav style section */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+/* makes changes on nav font and color */
+header nav ul li a {
+    margin: 0 10px;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 1px;
+    color: var(--primary-color);
+}
+/* Removes the clickable link decoration */
+header a {
+    text-decoration: none;
+}
+/* gives proper spacing to nav font that way they aren't right next to each other */
+header nav {
+    margin: 7px 0;
+}
+/* This will give nav section a highlighted background when hovered over */
+header nav ul li a:hover {
+    background: var(--third-color);
+    color: var(--second-color);
+    padding: 10px;
+    border-radius: 50px;
+    text-shadow: none;
+}
+/* Proflie Image section, resize image*/
+.profileImg{
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 100px;
+}
+/* Body Section */
+body{
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--primary-color);
+}
+/* wrap content within container to be on their own lines */
+
+.information-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+}
+
+.flex-row {
+    width: 100%;
+}
+
+/* applies to all titles under the section title class name*/
+
+.section-title {
+    font-size: 45px;
+    padding: 20px 40px;
+    width: 20%;
+    text-align: right;
+}
+
+/* about me section */
+
+.aboutMeSection {
+    display: flex;
+}
+
+.aboutMeSection p {
+    line-height: 1.5;
+    border-left: 3px solid;
+    padding: 40px;
+    width: 80%;
+}
+
+/* work section */
+
+.work-section {
+    display: flex;
+}
+
+/* grid container */
+/* puts items in grid and this is how you can change grid size (as in how much columns you want and how far apart they will be), and gives the work section a small line for looks*/
+.work-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 3px solid;
+    padding: 40px;
+    width: 80%;
+}
+/* this changes how big you want all the boxes to be and their border color */
+.work-grid-items {
+    min-width: 300px;
+    min-height: 100px;
+    border: 5px solid;
+    border-color: var(--third-color);
+    position: relative;
+  }
+
+/* adds gradient to grid items when hovered */
+
+  .work-grid-items::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(315deg, #35362d 0%, #d3d3d3 74%);
+    opacity: .0;  
+}
+/* gives an opcacity to the gradient */
+  .work-grid-items:hover::after {
+      opacity: .5;
+}
+/* sets how big the headers in the box will be, thier position in the box, and what color the box background will be along with header title color will be */
+  .box-headers {
+    position: absolute;
+    z-index: 1;
+    width: 60%;
+    height: 40px;
+    background-color: var(--bg-color);
+    color: var(--third-color);
+    text-align: left;
+}
+
+  .box-headers p {
+    position: absolute;
+    z-index: 2;
+    font-size: 12px;
+}
+
+/* box style */
+
+/* grid makes box 1 bigger than the rest of the boxes this effect doesn't work on mobile but it does on desktop. mobile is more streamlined*/
+
+  .box1 {
+    grid-column: 1/3;
+    grid-row: 1/5; 
+    background-image: url(./images/refactorcode.png);
+    background-size: cover;
+    background-position: left;   
+}
+/* makes sure there is no clickable link look effect and gives a yellow color to the titles of the boxes */
+  .box-headers a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+  .box2 {
+    background-image: url(./images/password\ generator.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+  .box3 {
+    background-image: url(./images/150.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.box4 {
+    background-image: url(./images/150.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.box5 {
+    background-image: url(./images/150.png);
+    background-size: cover;
+    background-position: left;
+}
+
+
+/* contact section starts */
+
+.contact-section {
+    display: flex;
+}
+
+.item-list {
+    width: 80%;
+    padding: 40px;
+    border-left: 3px solid;
+}
+
+.contact-section li {
+    display: inline;
+    padding: 40px;
+}
+/* gives color to the contact names takes away clickable link lool */
+.items {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+/* makes text highlited when hovered over the contacts */
+.items:hover {
+    background: var(--third-color);
+    color: var(--second-color);
+    padding: 10px;
+    border-radius: 50px;
+    text-shadow: none;
+}
+/* General tweaks and respsoniveness fixes start here */
+/* applied to entire section, gives padding to each line so they are separeted*/
+section {
+    padding: 20px 0 20px 0;
+}
+/* MEDIA SECTION */
+/* MEDIA QUERY FOR Larger DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1330px) {
+    .work-grid-items {
+        min-width: 0;
+      }
+
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
+/* header styling */
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+/* body section */
+    .information-container {
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+
+    .aboutMeSection, .work-section, .contact-section {
+        display: block;
+    }
+
+    .section-title {
+        width: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .aboutMeSection p {
+        width: auto;
+    }
+
+    .work-grid-container {
+        display: block;
+        width: auto;
+    }
+
+    .work-grid-items {
+        min-width: 300px;
+        min-height: 150px;
+      }
+/* Footer Section */
+    .contact-section li {
+        display: block;
+        padding: 10px;
+    }
+    
+
+}
+
+
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+
+@media screen and (max-width: 768px) {
+
+    .section-title {
+        text-align: left;
+        font-size: 40px;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin: 0px;
+        padding: 5px 10px;
+    }
+} 
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 575px) {
+
+    header nav ul li a {
+        margin-top: 0;
+        font-size: 18px;
+        flex-wrap: none;
+    }
+
+    .information-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    .work-grid-items {
+        min-width: 100%;
+    }
+
+    .box-headers {
+       height: auto;
+    }
+
+    .items {
+        text-decoration: none;
+        font-size: 17px;
+    }
+}
