@@ -2,14 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
 }
 /* this controls the colors for the whole website */
 :root {
-    --bg-color: rgb(143, 136, 136);
-    --primary-color: #7109AA;
-    --second-color: #FFD300;
-    --third-color: #48036f
+    --bg-color: #7900FF;
+    --primary-color: #93FFD8;
+    --second-color: #4380fa;
+    --third-color: #CFFFDC;
 }
 /* Header Section */
 header {
@@ -19,11 +18,17 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+/* adding some color to the h3 tag */
+a{
+    color: #93FFD8;
+}
 /* this changes the header and h1 tags color and how they look on the website */
 header h1 {
+    /* caret-color hides the blinking text input */
+    caret-color: rgba(0,0,0,0);
     color: var(--primary-color);
     background-color: var(--second-color);
-    font-size: 36px;
+    font-size: 2rem;
     margin: 0px;
     padding: 10px;
     box-shadow: 0 0 0 50px var(--second-color); 
@@ -62,12 +67,16 @@ header nav ul li a:hover {
 }
 /* Proflie Image section, resize image*/
 .profileImg{
-    width: 100px;
-    height: auto;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
     position: relative;
-    left: 100px;
+    caret-color: rgba(0,0,0,0);
+    width: 150px;
+    height: 150px;
+    left: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--third-color);
+    box-shadow: 0 0 0 #131114;
 }
 /* Body Section */
 body{
@@ -91,7 +100,8 @@ body{
 /* applies to all titles under the section title class name*/
 
 .section-title {
-    font-size: 45px;
+    caret-color: rgba(0,0,0,0);
+    font-size: 4rem;
     padding: 20px 40px;
     width: 20%;
     text-align: right;
@@ -111,7 +121,6 @@ body{
 }
 
 /* work section */
-
 .work-section {
     display: flex;
 }
@@ -130,10 +139,9 @@ body{
 .work-grid-items {
     min-width: 300px;
     min-height: 100px;
-    border: 5px solid;
-    border-color: var(--third-color);
+    border: 5px solid var(--second-color);
     position: relative;
-  }
+}
 
 /* adds gradient to grid items when hovered */
 
@@ -155,8 +163,8 @@ body{
   .box-headers {
     position: absolute;
     z-index: 1;
-    width: 60%;
-    height: 40px;
+    width: 50%;
+    height: 60px;
     background-color: var(--bg-color);
     color: var(--third-color);
     text-align: left;
@@ -175,18 +183,18 @@ body{
   .box1 {
     grid-column: 1/3;
     grid-row: 1/5; 
-    background-image: url(./images/refactorcode.png);
+    background-image: url(./images/coding-quiz.png);
     background-size: cover;
     background-position: left;   
 }
 /* makes sure there is no clickable link look effect and gives a yellow color to the titles of the boxes */
   .box-headers a {
     text-decoration: none;
-    color: var(--second-color);
+    color: var(--primary-color);
 }
 
   .box2 {
-    background-image: url(./images/password\ generator.jpg);
+    background-image: url(./images/dailyplanner.png);
     background-size: cover;
     background-position: left;
 }
@@ -198,13 +206,13 @@ body{
 }
 
 .box4 {
-    background-image: url(./images/150.png);
+    background-image: url(./images/musit.png);
     background-size: cover;
     background-position: left;
 }
 
 .box5 {
-    background-image: url(./images/150.png);
+    background-image: url(./images/react-port.png);
     background-size: cover;
     background-position: left;
 }
